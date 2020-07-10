@@ -188,11 +188,8 @@ html[data-theme='dark'] .markdown > blockquote > ol {
   SECTION: Sidebar 
 */
 html[data-theme='dark']
-  .docSidebarContainer_node_modules-\@docusaurus-theme-classic-src-theme-DocPage- {
+  .docSidebarContainer_node_modules-\@docusaurus-theme-classic-src-theme-DocPage-,
+html[data-theme='dark'] .docSidebarContainer_1cYp {
   border-right: 1px solid var(--dark-sidebar-border) !important;
-}
-
-html[data-theme='dark']
-  .sidebar_node_modules-\@docusaurus-theme-classic-src-theme-DocSidebar- {
   background-color: var(--dark-sidebar-bg);
 }

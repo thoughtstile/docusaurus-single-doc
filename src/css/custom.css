@@ -27,6 +27,8 @@
   --dark-blockquote-border: #212327;
   --dark-blockquote-bg: #303236;
   --dark-blockquote-text: #dcddde;
+
+  --dark-sidebar-bg: #303236;
   /* Discord Dark Theme END */
 
   /* Twitter Dark Theme BEGINNING */
@@ -38,7 +40,10 @@
 
   --dark-blockquote-border: #8797a5;
   --dark-blockquote-bg: #263441;
-  --dark-blockquote-text: #ffffff; */
+  --dark-blockquote-text: #ffffff;
+
+  --dark-sidebar-bg: null;
+  --dark-sidebar-border: #38444c; */
   /* Twitter Dark Theme END */
 }
 
@@ -179,6 +184,15 @@ html[data-theme='dark'] .markdown > blockquote > ol {
   font-size: 2.75rem !important;
 }
 
-/* .menu {
-  background-color: green;
-} */
+/* 
+  SECTION: Sidebar 
+*/
+html[data-theme='dark']
+  .docSidebarContainer_node_modules-\@docusaurus-theme-classic-src-theme-DocPage- {
+  border-right: 1px solid var(--dark-sidebar-border) !important;
+}
+
+html[data-theme='dark']
+  .sidebar_node_modules-\@docusaurus-theme-classic-src-theme-DocSidebar- {
+  background-color: var(--dark-sidebar-bg);
+}

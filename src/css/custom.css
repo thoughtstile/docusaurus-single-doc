@@ -1,0 +1,184 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+/* 
+  SECTION: Colors for Light and Dark modes
+*/
+
+:root {
+  /* 
+    `--light-primary` should be a darker as it is on a bright background.
+    `--dark-primary` should be brighter as it is on a dark background
+  */
+
+  /* Light Mode Colors */
+  --light-primary: #3578e5;
+  --light-navbar-border: #e6ecf0;
+
+  --light-blockquote-border: #abb5be;
+  --light-blockquote-bg: #eaedf0;
+  --light-blockquote-text: #1d1f23;
+
+  /* Discord Dark Theme BEGINNING */
+  --dark-primary: #00aff4;
+  --dark-navbar-bg: #1f2225;
+  --dark-content-bg: #36393e;
+  --dark-text-color: #dcddde;
+
+  --dark-blockquote-border: #212327;
+  --dark-blockquote-bg: #303236;
+  --dark-blockquote-text: #dcddde;
+  /* Discord Dark Theme END */
+
+  /* Twitter Dark Theme BEGINNING */
+  /* --dark-primary: #1da1f2;
+  --dark-navbar-bg: #16202c;
+  --dark-content-bg: #17222b;
+  --dark-text-color: #f7f7f8;
+  --dark-navbar-border: #38444c;
+
+  --dark-blockquote-border: #8797a5;
+  --dark-blockquote-bg: #263441;
+  --dark-blockquote-text: #ffffff; */
+  /* Twitter Dark Theme END */
+}
+
+/* 
+  SECTION: Primary Colors for light/dark modes
+*/
+
+/* color theme for light mode */
+:root[data-theme] {
+  --ifm-color-primary: var(--light-primary);
+  --ifm-navbar-shadow: null;
+}
+
+/* color theme for dark mode */
+:root[data-theme='dark'] {
+  --ifm-color-primary: var(--dark-primary);
+}
+
+/* 
+  SECTION: code highlighting 
+*/
+
+.docusaurus-highlight-code-line {
+  background-color: rgb(72, 77, 91);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+/* 
+  SECTION: navbar 
+*/
+
+html[data-theme] .navbar {
+  border-bottom: 1px solid var(--light-navbar-border);
+}
+
+html[data-theme='dark'] .navbar {
+  background-color: var(--dark-navbar-bg);
+  border-bottom: 1px solid var(--dark-navbar-border);
+}
+
+/* Some more horizontal spacing for the Navbar Logo */
+.navbar__logo {
+  padding-right: 4px;
+}
+
+/* spacing for the light/dark mode toggle */
+.react-toggle {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+/* 
+  SECTION: main-wrapper
+  This is the container for the markdown content.
+*/
+
+.main-wrapper {
+  padding-top: 1em;
+}
+
+html[data-theme='dark'] .main-wrapper {
+  background-color: var(--dark-content-bg);
+}
+
+/* 
+  SECTION: Inter Font
+
+  Inter/Inter Var is used for headings and Verdana is used for content.
+*/
+
+@import url('https://rsms.me/inter/inter.css');
+html {
+  font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+
+/* 
+  SECTION: .markdown 
+*/
+
+.markdown {
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+.markdown > h1,
+.markdown > h2,
+.markdown > h3,
+.markdown > h4 {
+  font-family: Inter var, Inter, verdana, arial, helvetica, sans-serif;
+}
+
+.markdown > h1 {
+  --ifm-h1-font-size: 2.25rem;
+  --ifm-h1-vertical-rhythm-top: 4;
+}
+
+/* 
+  SECTION: blockquote 
+*/
+
+.markdown > blockquote {
+  border-radius: 0.25rem;
+}
+
+html[data-theme] .markdown > blockquote {
+  border-color: var(--light-blockquote-border);
+  background-color: var(--light-blockquote-bg);
+}
+
+html[data-theme='dark'] .markdown > blockquote {
+  border-color: var(--dark-blockquote-border);
+  background-color: var(--dark-blockquote-bg);
+}
+
+html[data-theme] .markdown > blockquote > p {
+  color: var(--light-blockquote-text);
+}
+
+html[data-theme='dark'] .markdown > blockquote > p,
+html[data-theme='dark'] .markdown > blockquote > ol {
+  color: var(--dark-blockquote-text);
+}
+
+/* 
+  SECTION: Blog Post Header
+
+  Makes the link size a bit smaller.
+*/
+
+.blogPostTitle_node_modules-\@docusaurus-theme-classic-src-theme-BlogPostItem-,
+.blogPostTitle_2RZH {
+  font-size: 2.75rem !important;
+}
+
+/* .menu {
+  background-color: green;
+} */
